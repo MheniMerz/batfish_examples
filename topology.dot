@@ -28,7 +28,7 @@ graph multiverse_network {
 
    "as1border1":"swp2" -- "as2border1":"swp1"
 
-   "as1border2":"swp2" -- "as3border1":"swp2"
+   "as1border2":"swp2" -- "as3border1":"swp1"
 
    "as2border1":"swp2" -- "as2core1":"swp1"
    "as2border1":"swp3" -- "as2core2":"swp1"

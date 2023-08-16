@@ -28,23 +28,22 @@ graph multiverse_network {
 
    "as1border1":"swp2" -- "as2border1":"swp1"
 
-   "as1border2":"swp2" -- "as3border1":"swp1"
+   "as1border2":"swp2" -- "as3border2":"swp2"
 
    "as2border1":"swp2" -- "as2core1":"swp1"
    "as2border1":"swp3" -- "as2core2":"swp1"
+   
+   "as2border2":"swp1" -- "as3border1":"swp2"
+   "as2border2":"swp3" -- "as2core2":"swp2"
 
    "as2core1":"swp2" -- "as2border2":"swp2"
    "as2core1":"swp3" -- "as2dist1":"swp1"
    "as2core1":"swp4" -- "as2dist2":"swp1"
-
-   "as2dist1":"swp2" -- "as2core2":"swp2"
-   "as2dist1":"swp3" -- "as2dept1":"swp1"
- 
-   "as2border2":"swp1" -- "as3border1":"swp2"
-   "as2border2":"swp3" -- "as2core2":"swp2"
-
+   
    "as2core2":"swp3" -- "as2dist1":"swp2"
+   "as2core2":"swp4" -- "as2dist2":"swp2"
 
+   "as2dist1":"swp3" -- "as2dept1":"swp1"
    "as2dist2":"swp3" -- "as2dept1":"swp2"
 
    "as2dept1":"swp3" -- "host1":"eth1"
@@ -53,22 +52,22 @@ graph multiverse_network {
    "as3core1":"swp1" -- "as3border1":"swp1"
    "as3core1":"swp2" -- "as3border2":"swp1"
 
-   "oob-mgmt-switchh":"swp1" -- "oob-mgmt-server":"eth0"
-   "oob-mgmt-switchh":"swp2" -- "as1core1":"eth0"
-   "oob-mgmt-switchh":"swp3" -- "as1border1":"eth0"
-   "oob-mgmt-switchh":"swp4" -- "as1border2":"eth0"
-   "oob-mgmt-switchh":"swp5" -- "as2core1":"eth0"
-   "oob-mgmt-switchh":"swp6" -- "as2core2":"eth0"
-   "oob-mgmt-switchh":"swp7" -- "as2border1":"eth0"
-   "oob-mgmt-switchh":"swp8" -- "as2border2":"eth0"
-   "oob-mgmt-switchh":"swp9" -- "as2dist1":"eth0"
-   "oob-mgmt-switchh":"swp10" -- "as2dist2":"eth0"
-   "oob-mgmt-switchh":"swp11" -- "as2dept1":"eth0"
-   "oob-mgmt-switchh":"swp12" -- "as3core1":"eth0"
-   "oob-mgmt-switchh":"swp13" -- "as3border1":"eth0"
-   "oob-mgmt-switchh":"swp14" -- "as3border2":"eth0"
-   "oob-mgmt-switchh":"swp15" -- "host1":"eth0"
-   "oob-mgmt-switchh":"swp16" -- "host2":"eth0"
+   "oob-mgmt-switch":"swp1" -- "oob-mgmt-server":"eth0"
+   "oob-mgmt-switch":"swp2" -- "as1core1":"eth0"
+   "oob-mgmt-switch":"swp3" -- "as1border1":"eth0"
+   "oob-mgmt-switch":"swp4" -- "as1border2":"eth0"
+   "oob-mgmt-switch":"swp5" -- "as2core1":"eth0"
+   "oob-mgmt-switch":"swp6" -- "as2core2":"eth0"
+   "oob-mgmt-switch":"swp7" -- "as2border1":"eth0"
+   "oob-mgmt-switch":"swp8" -- "as2border2":"eth0"
+   "oob-mgmt-switch":"swp9" -- "as2dist1":"eth0"
+   "oob-mgmt-switch":"swp10" -- "as2dist2":"eth0"
+   "oob-mgmt-switch":"swp11" -- "as2dept1":"eth0"
+   "oob-mgmt-switch":"swp12" -- "as3core1":"eth0"
+   "oob-mgmt-switch":"swp13" -- "as3border1":"eth0"
+   "oob-mgmt-switch":"swp14" -- "as3border2":"eth0"
+   "oob-mgmt-switch":"swp15" -- "host1":"eth0"
+   "oob-mgmt-switch":"swp16" -- "host2":"eth0"
 
 }
 

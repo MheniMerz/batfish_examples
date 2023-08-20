@@ -1,27 +1,27 @@
-graph multiverse_network {
+graph batfish_examples_network{
    
    "fake" [function="fake"]
-   "oob-mgmt-server"  [function="oob-server" mgmt_ip="192.168.200.1" os="generic/ubuntu1804" ]
-   "oob-mgmt-switch"  [function="oob-switch" mgmt_ip="192.168.200.2" os="CumulusCommunity/cumulus-vx" version="4.2.1" ]
+   "oob-mgmt-server"  [function="oob-server" cpu="4" memory="2048"]
+   "oob-mgmt-switch"  [function="oob-switch" mgmt_ip="192.168.200.251" ports="64"]
 
-   "as1core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.11" ports="32"]
-   "as1core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.11" ports="32"]
-   "as1border1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.12" ports="32"]
-   "as1border2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.13" ports="32"]
+   "as1core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.11" ports="54"]
+   "as1core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.11" ports="54"]
+   "as1border1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.12" ports="54"]
+   "as1border2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.13" ports="54"]
 
-   "as2core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.21" ports="32"]
-   "as2core2" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.22" ports="32"]
-   "as2border1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.23" ports="32"]
-   "as2border2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.24" ports="32"]
-   "as2dist1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.25" ports="32"]
-   "as2dist2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.26" ports="32"]
-   "as2dept1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.27" ports="32"]
-   "host1" [function="host"  os="generic/ubuntu1804" mgmt_ip="192.168.200.28" ports="32"]
-   "host2" [function="host"  os="generic/ubuntu1804" mgmt_ip="192.168.200.29" ports="32"]
+   "as2core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.21" ports="54"]
+   "as2core2" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.22" ports="54"]
+   "as2border1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.23" ports="54"]
+   "as2border2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.24" ports="54"]
+   "as2dist1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.25" ports="54"]
+   "as2dist2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.26" ports="54"]
+   "as2dept1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.27" ports="54"]
+   "host1" [function="host"  os="generic/ubuntu1804" mgmt_ip="192.168.200.28" nic_model="e1000" memory="1024"]
+   "host2" [function="host"  os="generic/ubuntu1804" mgmt_ip="192.168.200.29" nic_model="e1000" memory="1024"]
 
-   "as3core1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.31" ports="32"]
-   "as3border1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.32" ports="32"]
-   "as3border2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.33" ports="32"]
+   "as3core1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.31" ports="54"]
+   "as3border1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.32" ports="54"]
+   "as3border2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.33" ports="54"]
 
    "as1core1":"swp1" -- "as1border1":"swp1"
    "as1core1":"swp2" -- "as1border2":"swp1"

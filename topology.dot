@@ -18,7 +18,7 @@ graph batfish_examples_network{
    "host1" [function="host"  os="generic/ubuntu1804" mgmt_ip="192.168.200.28" nic_model="e1000" memory="1024"]
    "host2" [function="host"  os="generic/ubuntu1804" mgmt_ip="192.168.200.29" nic_model="e1000" memory="1024"]
 
-   "as3core1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.31" ports="54"]
+   "as3core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.31" ports="54"]
    "as3border1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.32" ports="54"]
    "as3border2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.33" ports="54"]
 

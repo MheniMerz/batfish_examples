@@ -5,7 +5,6 @@ graph batfish_examples_network{
    "oob-mgmt-switch"  [function="oob-switch" mgmt_ip="192.168.200.251" ports="64"]
 
    "as1core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.11" ports="54"]
-   "as1core1" [function="spine"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.11" ports="54"]
    "as1border1" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.12" ports="54"]
    "as1border2" [function="leaf"  os="sonic-202012-f6f4c7f4" mgmt_ip="192.168.200.13" ports="54"]
 

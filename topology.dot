@@ -51,7 +51,7 @@ graph batfish_examples_network{
    "as3core1":"swp1" -- "as3border1":"swp1"
    "as3core1":"swp2" -- "as3border2":"swp1"
 
-   "oob-mgmt-server":"eth0" -- "oob-mgmt-switch":"swp1" [left_mac="44:38:50:22:01:01"] 
+   "oob-mgmt-server":"eth1" -- "oob-mgmt-switch":"swp1" [left_mac="44:38:50:22:01:01"] 
    "as1core1":"eth0" -- "oob-mgmt-switch":"swp2" [left_mac="44:38:50:22:01:02"] 
    "as1border1":"eth0" -- "oob-mgmt-switch":"swp3" [left_mac="44:38:50:22:01:03"]
    "as1border2":"eth0" -- "oob-mgmt-switch":"swp4" [left_mac="44:38:50:22:01:04"]
